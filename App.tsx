@@ -17,6 +17,7 @@ import * as Sentry from 'sentry-expo';
 import { DSN } from '@env'
 
 import HomeView from './views/HomeView';
+import LoginView from './views/LoginView';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -37,6 +38,13 @@ export default function App() {
             style = {{flex: 1}}>
             <TailwindProvider utilities={utilities}>
               <Stack.Navigator>
+                <Stack.Screen
+                    name = 'LoginView'
+                    component = { LoginView }
+                    options =  {{
+                      headerShown: false
+                    }}
+                  />
                 <Stack.Screen
                   name = 'RegisterView'
                   component = { RegisterView }
