@@ -25,7 +25,7 @@ When working on a **feature** you should create a new branch with the following 
 When working on a **fix** you should create a new branch with the following convention:
 - fix/branch-name
 
-__Unless you are making a core change, you should never directly commit to master__
+> __Unless you are making a core change, you should never directly commit to master!!__
 
 ### Creating a new branch
 - Open a bash terminal in the code base and run `git fetch --all`
