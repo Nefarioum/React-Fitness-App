@@ -16,6 +16,7 @@ import * as Sentry from 'sentry-expo';
 
 import { DSN } from '@env'
 
+import HomeView from './views/HomeView';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -39,6 +40,13 @@ export default function App() {
                 <Stack.Screen
                   name = 'RegisterView'
                   component = { RegisterView }
+                  options =  {{
+                    headerShown: false
+                  }}
+                />
+                <Stack.Screen
+                  name = 'HomeView'
+                  component = { HomeView }
                   options =  {{
                     headerShown: false
                   }}
