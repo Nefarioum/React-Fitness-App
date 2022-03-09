@@ -1,5 +1,5 @@
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {TailwindProvider} from 'tailwind-rn';
@@ -11,11 +11,12 @@ import { Store } from './Store'
 import { KeyboardAvoidingView } from 'react-native';
 import { Platform } from 'expo-modules-core';
 
-import RegisterView from './views/RegisterView';
 import * as Sentry from 'sentry-expo';
 
 import { DSN } from '@env'
 
+import HomeView from './views/HomeView';
+import LoginView from './views/LoginView';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -28,7 +29,13 @@ export default function App() {
   
   return (
     <Provider store={Store}>
-      <NavigationContainer>
+      <NavigationContainer theme={{
+        ...DefaultTheme,
+        colors: {
+          ...DefaultTheme.colors,
+          background: 'transparent',
+        },
+      }}>
         <SafeAreaProvider>
           <KeyboardAvoidingView 
             behavior = {Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -37,8 +44,15 @@ export default function App() {
             <TailwindProvider utilities={utilities}>
               <Stack.Navigator>
                 <Stack.Screen
-                  name = 'RegisterView'
-                  component = { RegisterView }
+                    name = 'LoginView'
+                    component = { LoginView }
+                    options =  {{
+                      headerShown: false
+                    }}
+                  />
+                <Stack.Screen
+                  name = 'HomeView'
+                  component = { HomeView }
                   options =  {{
                     headerShown: false
                   }}
