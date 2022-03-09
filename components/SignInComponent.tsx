@@ -1,12 +1,15 @@
 import { Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useTailwind } from 'tailwind-rn'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 
 const SignInComponent = () => {
   const tailwind = useTailwind();
   const Navigation = useNavigation();
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <SafeAreaView style={tailwind(`h-full justify-center items-center`)}>
         <View style={tailwind(`items-center`)}>
@@ -19,18 +22,18 @@ const SignInComponent = () => {
         </View>
 
         <TextInput
-        style={tailwind(`w-full bg-white px-32 py-2 mt-2 rounded-lg`)}
-        placeholder="Username"
-        //value = {}
-        //onChangeText = {text => }
+            style={tailwind(`w-full bg-white px-32 py-2 mt-2 rounded-lg`)}
+            placeholder="Username"
+            value = {username}
+            onChangeText = {text => setUsername(text)}
         />
         <TextInput
-        style={tailwind(`w-full bg-white px-32 py-2 mt-2 rounded-lg`)}
-        placeholder="Password"
-        //value = {}
-        //onChangeText = {text => }
-        secureTextEntry
-        />
+            style={tailwind(`w-full bg-white px-32 py-2 mt-2 rounded-lg`)}
+            placeholder="Password"
+            value = {password}
+            onChangeText = {text => setPassword(text)}
+            secureTextEntry
+            />
         </View>
 
         <TouchableOpacity style={tailwind(`items-end`)}>

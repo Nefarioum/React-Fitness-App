@@ -10,7 +10,7 @@ import RegisterComponent from '../components/RegisterComponent'
 const LoginView = () => {
   const tailwind = useTailwind();
   const Stack = createNativeStackNavigator();
-  
+
   return (
     <ImageBackground source={require('../assets/login-background.webp')} resizeMode="cover" style={{flex: 1,justifyContent: "cover"}}>
         <View style={[tailwind(`h-full`)]}>
