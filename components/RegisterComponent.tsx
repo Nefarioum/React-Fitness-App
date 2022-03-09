@@ -4,9 +4,20 @@ import { useTailwind } from 'tailwind-rn'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { CheckBox } from 'react-native-elements';
+import { auth } from '../firebase';
 
 const RegisterComponent = () => {
   const [isSelected, setSelection] = useState(false);
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignUp = () => {
+    auth.createUserWithEmailAndPassword(username, password).then(userCredentials => {
+        const user = userCredentials.user;
+        console.log(user?.email);
+    }).catch(error => alert(error.message))
+  };
 
   const tailwind = useTailwind();
   const Navigation = useNavigation();
@@ -24,8 +35,8 @@ const RegisterComponent = () => {
         <TextInput
             style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
             placeholder="Username"
-            //value = {}
-            //onChangeText = {text => }
+            value = {username}
+            onChangeText = {text => setUsername(text)}
         />
 
         <TextInput
@@ -37,8 +48,8 @@ const RegisterComponent = () => {
         <TextInput
             style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
             placeholder="Password"
-            //value = {}
-            //onChangeText = {text => }
+            value = {password}
+            onChangeText = {text => setPassword(text)}
             secureTextEntry
         />
 
@@ -65,7 +76,9 @@ const RegisterComponent = () => {
         <Text style={tailwind(`font-semibold text-white`)}>Check to agree to our terms and services</Text>
         </View>
 
-        <TouchableOpacity style={tailwind(`px-6 py-2 mt-4 rounded-lg bg-white w-40`)}>
+        <TouchableOpacity 
+            onPress={handleSignUp}
+            style={tailwind(`px-6 py-2 mt-4 rounded-lg bg-white w-40`)}>
             <View>
                 <Text style={tailwind(`text-lg text-black text-center font-semibold`)}>Sign up!</Text>
             </View>
