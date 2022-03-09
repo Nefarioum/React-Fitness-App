@@ -53,3 +53,5 @@ In the event you have been working on a feature and master has had changes since
 - Open a terminal inside the code base and run `expo start`
 - (Optional) Install the Expo Go app on your phone 
 - Scan the QR code shown in the terminal with your phone or launch the virtual phone option
+- (Optional: If changing styling) Open a 2nd terminal and inside run `dev:tailwind`
+
