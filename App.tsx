@@ -1,6 +1,7 @@
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Toast from 'react-native-toast-message';
 
 import {TailwindProvider} from 'tailwind-rn';
 import utilities from './tailwind.json';
@@ -58,6 +59,10 @@ export default function App() {
                   }}
                 />
               </Stack.Navigator>
+              <Toast
+                position='bottom'
+                bottomOffset={20}
+              />
             </TailwindProvider>
           </KeyboardAvoidingView>
         </SafeAreaProvider>
