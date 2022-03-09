@@ -12,6 +12,7 @@
     "dev:tailwind": "concurrently \"tailwindcss --input tailwind/input.css --output tailwind/tailwind.css --no-autoprefixer --watch\" \"tailwind-rn -i tailwind/tailwind.css --watch\""
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "~1.15.0",
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.0",
     "@reduxjs/toolkit": "^1.8.0",
@@ -22,7 +23,7 @@
     "expo-device": "~4.1.0",
     "expo-status-bar": "~1.2.0",
     "expo-updates": "~0.11.6",
-    "firebase": "^9.6.8",
+    "firebase": "9.6.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
