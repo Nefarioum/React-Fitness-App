@@ -1,5 +1,5 @@
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import {TailwindProvider} from 'tailwind-rn';
@@ -30,7 +30,13 @@ export default function App() {
   
   return (
     <Provider store={Store}>
-      <NavigationContainer>
+      <NavigationContainer theme={{
+        ...DefaultTheme,
+        colors: {
+          ...DefaultTheme.colors,
+          background: 'transparent',
+        },
+      }}>
         <SafeAreaProvider>
           <KeyboardAvoidingView 
             behavior = {Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -45,13 +51,6 @@ export default function App() {
                       headerShown: false
                     }}
                   />
-                <Stack.Screen
-                  name = 'RegisterView'
-                  component = { RegisterView }
-                  options =  {{
-                    headerShown: false
-                  }}
-                />
                 <Stack.Screen
                   name = 'HomeView'
                   component = { HomeView }

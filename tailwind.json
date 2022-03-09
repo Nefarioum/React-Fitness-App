@@ -32,6 +32,11 @@
 			"height": "100%"
 		}
 	},
+	"h-2/3": {
+		"style": {
+			"height": "66.666667%"
+		}
+	},
 	"w-40": {
 		"style": {
 			"width": 160
@@ -85,6 +90,21 @@
 	"w-24": {
 		"style": {
 			"width": 96
+		}
+	},
+	"w-64": {
+		"style": {
+			"width": 256
+		}
+	},
+	"w-80": {
+		"style": {
+			"width": 320
+		}
+	},
+	"w-96": {
+		"style": {
+			"width": 384
 		}
 	},
 	"flex-col": {
@@ -376,6 +396,11 @@
 	"opacity-20": {
 		"style": {
 			"opacity": 0.2
+		}
+	},
+	"opacity-0": {
+		"style": {
+			"opacity": 0
 		}
 	},
 	"hover:bg-blue-900:hover": {
