@@ -9,14 +9,21 @@ import { fireAuth, createUserWithEmailAndPassword } from '../firebase';
 const RegisterComponent = () => {
   const [isSelected, setSelection] = useState(false);
 
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [passwordConfirm, setPasswordConfirm] = useState('');
 
   const handleSignUp = () => {
-    createUserWithEmailAndPassword(fireAuth, username, password).then(userCredentials => {
+    if (email == '')  return alert('You need to enter in a email to continue')
+    if (password == '')  return alert('You need to enter in a password to continue')
+    if (password != passwordConfirm) return alert('The password you entered does not match!')
+    if (!isSelected) return alert('You need to accept the terms and services!')
+
+    createUserWithEmailAndPassword(fireAuth, email, password).then(userCredentials => {
         const user = userCredentials.user;
-        console.log(user?.email);
+        console.log(`Registered with email ${user?.email}`);
     }).catch(error => alert(error.message))
+
   };
 
   const tailwind = useTailwind();
@@ -35,15 +42,15 @@ const RegisterComponent = () => {
         <TextInput
             style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
             placeholder="Username"
-            value = {username}
-            onChangeText = {text => setUsername(text)}
+            //value = {username}
+            //onChangeText = {text => setUsername(text)}
         />
 
         <TextInput
             style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
             placeholder="Email"
-            //value = {}
-            //onChangeText = {text => }
+            value = {email}
+            onChangeText = {text => setEmail(text)}
         />
         <TextInput
             style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
@@ -53,11 +60,13 @@ const RegisterComponent = () => {
             secureTextEntry
         />
 
+        <TextInput style={{height: 0.1}} />
+
         <TextInput
             style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
             placeholder="Confirm Password"
-            //value = {}
-            //onChangeText = {text => }
+            value = {passwordConfirm}
+            onChangeText = {text => setPasswordConfirm(text)}
             secureTextEntry
         />
         </View>

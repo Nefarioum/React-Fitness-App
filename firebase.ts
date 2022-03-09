@@ -1,5 +1,5 @@
 import { initializeApp, FirebaseApp, getApps, getApp } from 'firebase/app';
-import { Auth, getAuth, initializeAuth, createUserWithEmailAndPassword  } from 'firebase/auth';
+import { Auth, getAuth, initializeAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { getReactNativePersistence } from 'firebase/auth/react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -28,4 +28,4 @@ if (getApps().length < 1) {
   fireAuth = getAuth();
 }
 
-export { firebaseApp, fireAuth, createUserWithEmailAndPassword };
+export { firebaseApp, fireAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged };
