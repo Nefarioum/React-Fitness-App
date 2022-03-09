@@ -1,21 +1,19 @@
 import { Image, ImageBackground, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import React from 'react'
 import { useTailwind } from 'tailwind-rn'
-import { Icon } from 'react-native-elements';
+
+import React from 'react'
 
 const LoginView = () => {
   const tailwind = useTailwind();
   return (
-    <ImageBackground source={{uri: 'https://preview.redd.it/w8pe25uxaw371.jpg?auto=webp&s=e038f4ed2bcf23978f929e47afcede488cbb09f5'}} resizeMode="cover" style={{flex: 1,justifyContent: "cover"}}>
+    <ImageBackground source={require('../assets/login-background.webp')} resizeMode="cover" style={{flex: 1,justifyContent: "cover"}}>
       <SafeAreaView style={tailwind(`h-full items-center justify-center`)}>
         <View style={tailwind(`rounded-xl p-4`)}>
           <View style={tailwind(`items-center`)}>
 
             <View style={tailwind(`items-center`)}>
               <Image style = {{ width: 120, height: 120, resizeMode: 'contain'}}
-                source = {{
-                    uri: 'https://cutewallpaper.org/24/white-logo-png/brand-assets-generatepress.png'
-                  }}
+                source = { require('../assets/dummy-logo.png') }
               />
               <Text style={tailwind(`font-semibold text-white pt-4`)}>Welcome back to Your Fitness!</Text>
             </View>
