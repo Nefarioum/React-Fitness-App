@@ -5,15 +5,16 @@ import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 
 import { fireAuth, signInWithEmailAndPassword, onAuthStateChanged } from '../firebase';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const SignInComponent = () => {
   const tailwind = useTailwind();
-  const Navigation = useNavigation();
+  const Navigation = useNavigation<NativeStackNavigationProp<{route: {} }>>();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(fireAuth, user => {
         if (user) {
-            Navigation.navigate('HomeView')
+            Navigation.replace('HomeView', [])
         }
     })
 
@@ -46,13 +47,13 @@ const SignInComponent = () => {
         </View>
 
         <TextInput
-            style={tailwind(`w-full bg-white px-32 py-2 mt-2 rounded-lg`)}
+            style={tailwind(`w-full bg-white px-32 py-2 mt-2 w-96 text-center rounded-lg`)}
             placeholder="Username"
             value = {email}
             onChangeText = {text => setEmail(text)}
         />
         <TextInput
-            style={tailwind(`w-full bg-white px-32 py-2 mt-2 rounded-lg`)}
+            style={tailwind(`w-full bg-white px-32 py-2 mt-2 w-96 text-center rounded-lg`)}
             placeholder="Password"
             value = {password}
             onChangeText = {text => setPassword(text)}
