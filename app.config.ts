@@ -26,7 +26,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.nefarioum.fitnessapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
