@@ -12,10 +12,20 @@ import { KeyboardAvoidingView } from 'react-native';
 import { Platform } from 'expo-modules-core';
 
 import RegisterView from './views/RegisterView';
+import * as Sentry from 'sentry-expo';
+
+import { DSN } from '@env'
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
 
+  Sentry.init({
+    dsn: DSN,
+    enableInExpoDevelopment: true,
+    debug: true,
+  });
+  
   return (
     <Provider store={Store}>
       <NavigationContainer>

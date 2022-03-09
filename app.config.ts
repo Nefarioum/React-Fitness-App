@@ -1,5 +1,8 @@
-{
-  "expo": {
+import { ExpoConfig, ConfigContext } from '@expo/config';
+import 'dotenv/config'
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
     "name": "fitness-app",
     "slug": "fitness-app",
     "version": "1.0.0",
@@ -27,6 +30,20 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": process.env.SENTRY_ORG,
+            "project": process.env.SENTRY_PROJECT,
+            "authToken": process.env.SENTRY_AUTH_TOKEN
+          }
+        }
+      ]
     }
-  }
-}
+});
