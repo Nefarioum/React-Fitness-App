@@ -40,20 +40,20 @@ const RegisterComponent = () => {
             </View>
 
             <TextInput
-                style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
+                style={tailwind(`w-full bg-white text-center h-9 mt-2 w-96 rounded-lg`)}
                 placeholder="Username"
                 //value = {username}
                 //onChangeText = {text => setUsername(text)}
             />
 
             <TextInput
-                style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
+                style={tailwind(`w-full bg-white text-center h-9 mt-2 w-96 rounded-lg`)}
                 placeholder="Email"
                 value = {email}
                 onChangeText = {text => setEmail(text)}
             />
             <TextInput
-                style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
+                style={tailwind(`w-full bg-white text-center h-9 mt-2 w-96 rounded-lg`)}
                 placeholder="Password"
                 value = {password}
                 onChangeText = {text => setPassword(text)}
@@ -64,7 +64,7 @@ const RegisterComponent = () => {
             <TextInput style={{height: 0.1}} />
 
             <TextInput
-                style={tailwind(`w-full bg-white text-center px-32 py-2 mt-2 w-96 rounded-lg`)}
+                style={tailwind(`w-full bg-white text-center h-9 mt-2 w-96 rounded-lg`)}
                 placeholder="Confirm Password"
                 value = {passwordConfirm}
                 onChangeText = {text => setPasswordConfirm(text)}

@@ -39,26 +39,28 @@ const SignInComponent = () => {
     <SafeAreaView style={tailwind(`h-full justify-center items-center`)}>
         <View style={tailwind(`items-center`)}>
 
-        <View style={tailwind(`items-center`)}>
-        <Image style = {{ width: 120, height: 120, resizeMode: 'contain'}}
-            source = { require('../assets/dummy-logo.png') }
-        />
-        <Text style={tailwind(`font-semibold text-white pt-4 pb-4`)}>Welcome back to Your Fitness!</Text>
-        </View>
+            <View style={tailwind(`items-center`)}>
+                <Image style = {{ width: 120, height: 120, resizeMode: 'contain'}}
+                    source = { require('../assets/dummy-logo.png') }
+                />
+                <Text style={tailwind(`font-semibold text-white pt-4 pb-4`)}>Welcome back to Your Fitness!</Text>
+            </View>
 
-        <TextInput
-            style={tailwind(`w-full bg-white px-32 py-2 mt-2 w-96 text-center rounded-lg`)}
-            placeholder="Username"
-            value = {email}
-            onChangeText = {text => setEmail(text)}
-        />
-        <TextInput
-            style={tailwind(`w-full bg-white px-32 py-2 mt-2 w-96 text-center rounded-lg`)}
-            placeholder="Password"
-            value = {password}
-            onChangeText = {text => setPassword(text)}
-            secureTextEntry
+            <View>
+            <TextInput
+                style={[tailwind(`w-full bg-white mt-2 w-96 text-center h-9 rounded-lg`)]}
+                placeholder="Username"
+                value = {email}
+                onChangeText = {text => setEmail(text)}
             />
+            </View>
+            <TextInput
+                style={tailwind(`w-full bg-white h-9 mt-2 w-96 text-center rounded-lg`)}
+                placeholder="Password"
+                value = {password}
+                onChangeText = {text => setPassword(text)}
+                secureTextEntry
+                />
         </View>
 
         <TouchableOpacity style={tailwind(`items-end`)}>
