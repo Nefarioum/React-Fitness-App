@@ -1,5 +1,6 @@
-import { Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useTailwind } from 'tailwind-rn'
+import Toast from 'react-native-toast-message';
 
 import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
@@ -11,10 +12,13 @@ const SignInComponent = () => {
   const tailwind = useTailwind();
   const Navigation = useNavigation<NativeStackNavigationProp<{route: {} }>>();
 
+  const showToast = (type:string, title:string, message:string) => { Toast.show({ type: type, text1: title, text2: message });}
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(fireAuth, user => {
         if (user) {
             Navigation.replace('HomeView', [])
+            showToast('success', 'Logged in successfully!', 'Welcome back, you have logged in as ' + user?.email);
         }
     })
 
@@ -25,13 +29,13 @@ const SignInComponent = () => {
   const [password, setPassword] = useState('');
 
   const handleSignIn = () => {
-    if (email == '')  return alert('You need to enter in a email to continue')
-    if (password == '')  return alert('You need to enter in a password to continue')
+    if (email == '')  return showToast('error', 'Login Error', 'You need to enter in a email to continue')
+    if (password == '')  return showToast('error', 'Login Error', 'You need to enter in a password to continue')
 
     signInWithEmailAndPassword(fireAuth, email, password).then(userCredentials => {
         const user = userCredentials.user;
         console.log(`Logged in with ${user?.email}`);
-    }).catch(error => alert(error.message))
+    }).catch(error => showToast('error', 'Login Error', error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password' ? 'Incorrect credentials provided.' : error.code === 'auth/invalid-email' ? 'Please enter a valid email address.' : error.code === 'auth/user-disabled' ? 'This account has been de-activated for breach of policy.' : error.message))
 
   };
 
