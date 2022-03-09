@@ -4,7 +4,7 @@ import { useTailwind } from 'tailwind-rn'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { CheckBox } from 'react-native-elements';
-import { auth } from '../firebase';
+import { fireAuth, createUserWithEmailAndPassword } from '../firebase';
 
 const RegisterComponent = () => {
   const [isSelected, setSelection] = useState(false);
@@ -13,7 +13,7 @@ const RegisterComponent = () => {
   const [password, setPassword] = useState('');
 
   const handleSignUp = () => {
-    auth.createUserWithEmailAndPassword(username, password).then(userCredentials => {
+    createUserWithEmailAndPassword(fireAuth, username, password).then(userCredentials => {
         const user = userCredentials.user;
         console.log(user?.email);
     }).catch(error => alert(error.message))
