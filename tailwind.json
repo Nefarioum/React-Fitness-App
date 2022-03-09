@@ -15,10 +15,10 @@
 			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
 		}
 	},
-	"bg-red-300": {
+	"bg-red-200": {
 		"style": {
 			"--tw-bg-opacity": 1,
-			"backgroundColor": "rgb(252 165 165 / var(--tw-bg-opacity))"
+			"backgroundColor": "rgb(254 202 202 / var(--tw-bg-opacity))"
 		}
 	},
 	"p-5": {

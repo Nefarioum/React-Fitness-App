@@ -8,8 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "build:tailwind": "tailwindcss --input input.css --output tailwind.css --no-autoprefixer && tailwind-rn",
-    "dev:tailwind": "concurrently \"tailwindcss --input input.css --output tailwind.css --no-autoprefixer --watch\" \"tailwind-rn --watch\""
+    "build:tailwind": "tailwindcss --input tailwind/input.css --output tailwind/tailwind.css --no-autoprefixer && tailwind-rn -i tailwind/tailwind.css",
+    "dev:tailwind": "concurrently \"tailwindcss --input tailwind/input.css --output tailwind/tailwind.css --no-autoprefixer --watch\" \"tailwind-rn -i tailwind/tailwind.css --watch\""
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.8",
