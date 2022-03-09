@@ -14,25 +14,19 @@ const RegisterComponent = () => {
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
 
-  const showToast = (type:string, title:string, message:string) => {
-    Toast.show({
-      type: type,
-      text1: title,
-      text2: message
-    });
-  }
+  const showToast = (type:string, title:string, message:string) => { Toast.show({ type: type, text1: title, text2: message });}
 
   const handleSignUp = () => {
-    if (email == '')  return showToast('error', 'Login Error', 'You need to enter in a email to continue')
-    if (password == '')  return showToast('error', 'Login Error', 'You need to enter in a password to continue')
-    if (password != passwordConfirm) return showToast('error', 'Login Error', 'The password you entered does not match!')
-    if (!isSelected) return showToast('error', 'Login Error', 'You need to accept the terms and services!')
+    if (email == '')  return showToast('error', 'Registration Error', 'You need to enter in a email to continue')
+    if (password == '')  return showToast('error', 'Registration Error', 'You need to enter in a password to continue')
+    if (password != passwordConfirm) return showToast('error', 'Registration Error', 'The password you entered does not match!')
+    if (!isSelected) return showToast('error', 'Registration Error', 'You need to accept the terms and services!')
 
     createUserWithEmailAndPassword(fireAuth, email, password).then(userCredentials => {
         const user = userCredentials.user;
         
         console.log(`Registered with email ${user?.email}`);
-    }).catch(error => showToast('error', 'Login Error', error.code === 'auth/email-already-in-use' ? 'This email is already in use.' : error.code === 'auth/invalid-email' ? 'Please enter a valid email address.' : error.code === 'auth/weak-password' ? 'Please enter a more stronger password.' : error.message));
+    }).catch(error => showToast('error', 'Registration Error', error.code === 'auth/email-already-in-use' ? 'This email is already in use.' : error.code === 'auth/invalid-email' ? 'Please enter a valid email address.' : error.code === 'auth/weak-password' ? 'Please enter a more stronger password.' : error.message));
 
   };
 

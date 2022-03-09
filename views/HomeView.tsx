@@ -4,6 +4,7 @@ import { useTailwind } from 'tailwind-rn'
 import { useNavigation } from '@react-navigation/native';
 
 import { fireAuth, signOut } from '../firebase';
+import Toast from 'react-native-toast-message';
 
 import React from 'react'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -12,9 +13,12 @@ const HomeView = () => {
   const currentHour = new Date().getHours()
   const currentTimeOfDay = 'Good ' + (currentHour < 12 ? 'morning!' : currentHour < 18 ? 'afternoon!' : 'evening!');
 
+  const showToast = (type:string, title:string, message:string) => { Toast.show({ type: type, text1: title, text2: message });}
+
   const handleSignOut = () => {
     signOut(fireAuth).then(() => {
       Navigation.replace('LoginView', [])
+      showToast('success', 'Logged out successfully!', 'You have successfully logged out of your account.');
     });
   };
 
