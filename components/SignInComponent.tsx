@@ -18,7 +18,7 @@ const SignInComponent = () => {
     const unsubscribe = onAuthStateChanged(fireAuth, user => {
         if (user) {
             Navigation.replace('HomeView', [])
-            showToast('success', 'Logged in successfully!', 'Welcome back, you have logged in as ' + user?.email);
+            showToast('success', 'Logged in successfully!', 'Welcome back, you have logged in as ' + (user.displayName === null ? user?.email : user?.displayName));
         }
     })
 

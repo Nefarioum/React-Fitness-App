@@ -26,7 +26,7 @@ const HomeView = () => {
   const Navigation = useNavigation<NativeStackNavigationProp<{route: {} }>>();
   return (
     <SafeAreaView style={tailwind(`h-full justify-center items-center`)}>
-      <Text style={tailwind(`text-center`)}>{currentTimeOfDay}{"\n"} You are signed in as {fireAuth.currentUser?.email} </Text>
+      <Text style={tailwind(`text-center`)}>{currentTimeOfDay}{"\n"} You are signed in as {(fireAuth.currentUser?.displayName === null ? fireAuth.currentUser?.email : fireAuth.currentUser?.displayName)}</Text>
 
       <TouchableOpacity 
             onPress={handleSignOut}

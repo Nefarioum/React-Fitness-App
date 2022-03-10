@@ -5,11 +5,12 @@ import Toast from 'react-native-toast-message';
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { CheckBox } from 'react-native-elements';
-import { fireAuth, createUserWithEmailAndPassword } from '../firebase';
+import { fireAuth, createUserWithEmailAndPassword, updateProfile} from '../firebase';
 
 const RegisterComponent = () => {
   const [isSelected, setSelection] = useState(false);
 
+  const [displayName, setDisplayName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
@@ -17,6 +18,7 @@ const RegisterComponent = () => {
   const showToast = (type:string, title:string, message:string) => { Toast.show({ type: type, text1: title, text2: message });}
 
   const handleSignUp = () => {
+    if (displayName == '')  return showToast('error', 'Registration Error', 'You need to enter in a display name to continue')
     if (email == '')  return showToast('error', 'Registration Error', 'You need to enter in a email to continue')
     if (password == '')  return showToast('error', 'Registration Error', 'You need to enter in a password to continue')
     if (password != passwordConfirm) return showToast('error', 'Registration Error', 'The password you entered does not match!')
@@ -25,7 +27,10 @@ const RegisterComponent = () => {
     createUserWithEmailAndPassword(fireAuth, email, password).then(userCredentials => {
         const user = userCredentials.user;
         
-        console.log(`Registered with email ${user?.email}`);
+        updateProfile(user, {displayName: displayName}).then(() => {
+            console.log(`Registered with email ${(user.displayName === null ? user?.email : user?.displayName)}`);
+        });
+        
     }).catch(error => showToast('error', 'Registration Error', error.code === 'auth/email-already-in-use' ? 'This email is already in use.' : error.code === 'auth/invalid-email' ? 'Please enter a valid email address.' : error.code === 'auth/weak-password' ? 'Please enter a more stronger password.' : error.message));
 
   };
@@ -45,9 +50,9 @@ const RegisterComponent = () => {
 
             <TextInput
                 style={tailwind(`w-full bg-white text-center h-9 mt-2 w-96 rounded-lg`)}
-                placeholder="Username"
-                //value = {username}
-                //onChangeText = {text => setUsername(text)}
+                placeholder="Display Name"
+                value = {displayName}
+                onChangeText = {text => setDisplayName(text)}
             />
 
             <TextInput

@@ -67,26 +67,10 @@
 			"borderBottomLeftRadius": 8
 		}
 	},
-	"rounded-xl": {
-		"style": {
-			"borderTopLeftRadius": 12,
-			"borderTopRightRadius": 12,
-			"borderBottomRightRadius": 12,
-			"borderBottomLeftRadius": 12
-		}
-	},
 	"bg-white": {
 		"style": {
 			"--tw-bg-opacity": 1,
 			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
-		}
-	},
-	"p-4": {
-		"style": {
-			"paddingTop": 16,
-			"paddingRight": 16,
-			"paddingBottom": 16,
-			"paddingLeft": 16
 		}
 	},
 	"px-6": {
@@ -99,12 +83,6 @@
 		"style": {
 			"paddingTop": 8,
 			"paddingBottom": 8
-		}
-	},
-	"px-32": {
-		"style": {
-			"paddingLeft": 128,
-			"paddingRight": 128
 		}
 	},
 	"pt-4": {
