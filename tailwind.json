@@ -1,4 +1,36 @@
 {
+	"absolute": {
+		"style": {
+			"position": "absolute"
+		}
+	},
+	"inset-x-0": {
+		"style": {
+			"left": 0,
+			"right": 0
+		}
+	},
+	"inset-x-40": {
+		"style": {
+			"left": 160,
+			"right": 160
+		}
+	},
+	"bottom-0": {
+		"style": {
+			"bottom": 0
+		}
+	},
+	"-top-14": {
+		"style": {
+			"top": -56
+		}
+	},
+	"top-5": {
+		"style": {
+			"top": 20
+		}
+	},
 	"mt-2": {
 		"style": {
 			"marginTop": 8
@@ -7,6 +39,21 @@
 	"mt-4": {
 		"style": {
 			"marginTop": 16
+		}
+	},
+	"mt-14": {
+		"style": {
+			"marginTop": 56
+		}
+	},
+	"mt-3": {
+		"style": {
+			"marginTop": 12
+		}
+	},
+	"mt-8": {
+		"style": {
+			"marginTop": 32
 		}
 	},
 	"flex": {
@@ -24,6 +71,21 @@
 			"height": 36
 		}
 	},
+	"h-4/5": {
+		"style": {
+			"height": "80%"
+		}
+	},
+	"h-24": {
+		"style": {
+			"height": 96
+		}
+	},
+	"h-20": {
+		"style": {
+			"height": 80
+		}
+	},
 	"w-full": {
 		"style": {
 			"width": "100%"
@@ -39,9 +101,24 @@
 			"width": 160
 		}
 	},
+	"w-24": {
+		"style": {
+			"width": 96
+		}
+	},
+	"w-20": {
+		"style": {
+			"width": 80
+		}
+	},
 	"flex-col": {
 		"style": {
 			"flexDirection": "column"
+		}
+	},
+	"content-center": {
+		"style": {
+			"alignContent": "center"
 		}
 	},
 	"items-end": {
@@ -67,10 +144,36 @@
 			"borderBottomLeftRadius": 8
 		}
 	},
+	"rounded-full": {
+		"style": {
+			"borderTopLeftRadius": 9999,
+			"borderTopRightRadius": 9999,
+			"borderBottomRightRadius": 9999,
+			"borderBottomLeftRadius": 9999
+		}
+	},
+	"rounded-t-xl": {
+		"style": {
+			"borderTopLeftRadius": 12,
+			"borderTopRightRadius": 12
+		}
+	},
+	"rounded-t-2xl": {
+		"style": {
+			"borderTopLeftRadius": 16,
+			"borderTopRightRadius": 16
+		}
+	},
 	"bg-white": {
 		"style": {
 			"--tw-bg-opacity": 1,
 			"backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
+		}
+	},
+	"bg-blue-100": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(219 234 254 / var(--tw-bg-opacity))"
 		}
 	},
 	"px-6": {
@@ -83,6 +186,12 @@
 		"style": {
 			"paddingTop": 8,
 			"paddingBottom": 8
+		}
+	},
+	"px-4": {
+		"style": {
+			"paddingLeft": 16,
+			"paddingRight": 16
 		}
 	},
 	"pt-4": {
@@ -104,6 +213,24 @@
 		"style": {
 			"fontSize": 18,
 			"lineHeight": 28
+		}
+	},
+	"text-4xl": {
+		"style": {
+			"fontSize": 36,
+			"lineHeight": 40
+		}
+	},
+	"text-3xl": {
+		"style": {
+			"fontSize": 30,
+			"lineHeight": 36
+		}
+	},
+	"text-base": {
+		"style": {
+			"fontSize": 16,
+			"lineHeight": 24
 		}
 	},
 	"font-semibold": {

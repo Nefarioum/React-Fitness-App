@@ -36,7 +36,6 @@ const RegisterComponent = () => {
   };
 
   const tailwind = useTailwind();
-  const Navigation = useNavigation();
   return (
     <SafeAreaView style={tailwind(`h-full justify-center items-center`)}>
         <View style={tailwind(`items-center`)}>
