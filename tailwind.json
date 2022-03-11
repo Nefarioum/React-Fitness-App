@@ -31,6 +31,30 @@
 			"top": 20
 		}
 	},
+	"m-4": {
+		"style": {
+			"marginTop": 16,
+			"marginRight": 16,
+			"marginBottom": 16,
+			"marginLeft": 16
+		}
+	},
+	"m-8": {
+		"style": {
+			"marginTop": 32,
+			"marginRight": 32,
+			"marginBottom": 32,
+			"marginLeft": 32
+		}
+	},
+	"m-9": {
+		"style": {
+			"marginTop": 36,
+			"marginRight": 36,
+			"marginBottom": 36,
+			"marginLeft": 36
+		}
+	},
 	"mt-2": {
 		"style": {
 			"marginTop": 8
@@ -54,6 +78,41 @@
 	"mt-8": {
 		"style": {
 			"marginTop": 32
+		}
+	},
+	"mt-10": {
+		"style": {
+			"marginTop": 40
+		}
+	},
+	"ml-4": {
+		"style": {
+			"marginLeft": 16
+		}
+	},
+	"ml-2": {
+		"style": {
+			"marginLeft": 8
+		}
+	},
+	"mb-4": {
+		"style": {
+			"marginBottom": 16
+		}
+	},
+	"ml-3": {
+		"style": {
+			"marginLeft": 12
+		}
+	},
+	"ml-9": {
+		"style": {
+			"marginLeft": 36
+		}
+	},
+	"ml-8": {
+		"style": {
+			"marginLeft": 32
 		}
 	},
 	"flex": {
@@ -111,9 +170,29 @@
 			"width": 80
 		}
 	},
+	"w-4": {
+		"style": {
+			"width": 16
+		}
+	},
+	"w-80": {
+		"style": {
+			"width": 320
+		}
+	},
+	"flex-row": {
+		"style": {
+			"flexDirection": "row"
+		}
+	},
 	"flex-col": {
 		"style": {
 			"flexDirection": "column"
+		}
+	},
+	"flex-wrap": {
+		"style": {
+			"flexWrap": "wrap"
 		}
 	},
 	"content-center": {
@@ -152,6 +231,14 @@
 			"borderBottomLeftRadius": 9999
 		}
 	},
+	"rounded-xl": {
+		"style": {
+			"borderTopLeftRadius": 12,
+			"borderTopRightRadius": 12,
+			"borderBottomRightRadius": 12,
+			"borderBottomLeftRadius": 12
+		}
+	},
 	"rounded-t-xl": {
 		"style": {
 			"borderTopLeftRadius": 12,
@@ -164,6 +251,58 @@
 			"borderTopRightRadius": 16
 		}
 	},
+	"border-2": {
+		"style": {
+			"borderTopWidth": 2,
+			"borderRightWidth": 2,
+			"borderBottomWidth": 2,
+			"borderLeftWidth": 2
+		}
+	},
+	"border": {
+		"style": {
+			"borderTopWidth": 1,
+			"borderRightWidth": 1,
+			"borderBottomWidth": 1,
+			"borderLeftWidth": 1
+		}
+	},
+	"border-black": {
+		"style": {
+			"--tw-border-opacity": 1,
+			"borderTopColor": "rgb(0 0 0 / var(--tw-border-opacity))",
+			"borderRightColor": "rgb(0 0 0 / var(--tw-border-opacity))",
+			"borderBottomColor": "rgb(0 0 0 / var(--tw-border-opacity))",
+			"borderLeftColor": "rgb(0 0 0 / var(--tw-border-opacity))"
+		}
+	},
+	"border-gray-100": {
+		"style": {
+			"--tw-border-opacity": 1,
+			"borderTopColor": "rgb(243 244 246 / var(--tw-border-opacity))",
+			"borderRightColor": "rgb(243 244 246 / var(--tw-border-opacity))",
+			"borderBottomColor": "rgb(243 244 246 / var(--tw-border-opacity))",
+			"borderLeftColor": "rgb(243 244 246 / var(--tw-border-opacity))"
+		}
+	},
+	"border-gray-700": {
+		"style": {
+			"--tw-border-opacity": 1,
+			"borderTopColor": "rgb(55 65 81 / var(--tw-border-opacity))",
+			"borderRightColor": "rgb(55 65 81 / var(--tw-border-opacity))",
+			"borderBottomColor": "rgb(55 65 81 / var(--tw-border-opacity))",
+			"borderLeftColor": "rgb(55 65 81 / var(--tw-border-opacity))"
+		}
+	},
+	"border-gray-500": {
+		"style": {
+			"--tw-border-opacity": 1,
+			"borderTopColor": "rgb(107 114 128 / var(--tw-border-opacity))",
+			"borderRightColor": "rgb(107 114 128 / var(--tw-border-opacity))",
+			"borderBottomColor": "rgb(107 114 128 / var(--tw-border-opacity))",
+			"borderLeftColor": "rgb(107 114 128 / var(--tw-border-opacity))"
+		}
+	},
 	"bg-white": {
 		"style": {
 			"--tw-bg-opacity": 1,
@@ -174,6 +313,34 @@
 		"style": {
 			"--tw-bg-opacity": 1,
 			"backgroundColor": "rgb(219 234 254 / var(--tw-bg-opacity))"
+		}
+	},
+	"bg-blue-400": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(96 165 250 / var(--tw-bg-opacity))"
+		}
+	},
+	"bg-blue-500": {
+		"style": {
+			"--tw-bg-opacity": 1,
+			"backgroundColor": "rgb(59 130 246 / var(--tw-bg-opacity))"
+		}
+	},
+	"p-4": {
+		"style": {
+			"paddingTop": 16,
+			"paddingRight": 16,
+			"paddingBottom": 16,
+			"paddingLeft": 16
+		}
+	},
+	"p-2": {
+		"style": {
+			"paddingTop": 8,
+			"paddingRight": 8,
+			"paddingBottom": 8,
+			"paddingLeft": 8
 		}
 	},
 	"px-6": {
@@ -202,6 +369,11 @@
 	"pb-4": {
 		"style": {
 			"paddingBottom": 16
+		}
+	},
+	"pr-4": {
+		"style": {
+			"paddingRight": 16
 		}
 	},
 	"text-center": {
