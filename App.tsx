@@ -53,8 +53,15 @@ export default function App() {
                     }}
                   />
                 <Stack.Screen
-                  name = 'HomeView'
+                  name = 'WelcomeView'
                   component = { WelcomeView }
+                  options =  {{
+                    headerShown: false
+                  }}
+                />
+                <Stack.Screen
+                  name = 'HomeView'
+                  component = { HomeView }
                   options =  {{
                     headerShown: false
                   }}

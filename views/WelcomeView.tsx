@@ -1,6 +1,9 @@
 import { Text, TouchableOpacity, View } from 'react-native'
+
+import { useNavigation } from '@react-navigation/native';
 import { useTailwind } from 'tailwind-rn'
 
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useState } from 'react'
 
 interface SportsData {
@@ -88,6 +91,7 @@ const sportData: SportsData[] = [
 const WelcomeView = () => {
   const [selected, setSelected] = useState(-1);
 
+  const Navigation = useNavigation<NativeStackNavigationProp<{route: {} }>>();
   const tailwind = useTailwind();
   return (
     <View style={tailwind(`bg-blue-100 h-full`)}>
@@ -117,11 +121,14 @@ const WelcomeView = () => {
         </View>
         <View style={tailwind(`items-center`)}>
           <TouchableOpacity
+                  onPress={() => Navigation.replace('HomeView')}
+                  disabled={(sportData.every(v => v.selected === false) ? true : false)}
                   style={[tailwind(`ml-4 border-gray-500 rounded-full w-80`), (sportData.every(v => v.selected === false) ? tailwind(`bg-gray-300`) : tailwind(`bg-blue-500`))]}>
                       <Text style={tailwind(`text-lg p-2 text-white text-center`)}>Continue</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
+                  onPress={() => Navigation.replace('HomeView')}
                   style={tailwind(`ml-4 mb-4 rounded-full w-80`)}>
                       <Text style={tailwind(`text-lg p-2 text-black text-center`)}>Not now</Text>
           </TouchableOpacity>
