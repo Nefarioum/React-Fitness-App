@@ -3,65 +3,84 @@ import { useTailwind } from 'tailwind-rn'
 
 import React from 'react'
 
-const sportData = [
+interface SportsData {
+  id: number, 
+  text: string, 
+  selected: boolean, 
+  key: string
+}
+
+const sportData: SportsData[] = [
   {
     id: 1,
     text: "🏃Running",
+    selected: false,
     key: "running"
   },
   {
     id: 2,
     text: "🚲 Cycling",
+    selected: false,
     key: "cycling"
   },
   {
     id: 3,
     text: "🏊 Swimming",
+    selected: false,
     key: "swimming"
   },
   {
     id: 4,
     text: "🥊 Boxing",
+    selected: false,
     key: "boxing"
   },
   {
     id: 5,
     text: "⚽ Football",
+    selected: false,
     key: "boxing"
   },
   {
     id: 6,
     text: "🎾 Tennis",
+    selected: false,
     key: "tennis"
   },
   {
     id: 7,
     text: "🏋️ Weights",
+    selected: false,
     key: "weight"
   },
   {
     id: 8,
     text: "🍳 Recipes",
+    selected: false,
     key: "recipes"
   },
   {
     id: 9,
     text: "🧘 Yoga",
+    selected: false,
     key: "yoga"
   },
   {
     id: 10,
     text: "🏀 Basketball",
+    selected: false,
     key: "basketball"
   },
   {
     id: 11,
     text: "🚵 Spinning",
+    selected: false,
     key: "basketball"
   },
   {
     id: 12,
     text: "🙆‍♀️ Pilates",
+    selected: false,
     key: "pilates"
   }
 ];
