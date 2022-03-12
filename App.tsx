@@ -18,6 +18,7 @@ import { DSN } from '@env'
 
 import HomeView from './views/HomeView';
 import LoginView from './views/LoginView';
+import WelcomeView from './views/WelcomeView';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -51,6 +52,13 @@ export default function App() {
                       headerShown: false
                     }}
                   />
+                <Stack.Screen
+                  name = 'WelcomeView'
+                  component = { WelcomeView }
+                  options =  {{
+                    headerShown: false
+                  }}
+                />
                 <Stack.Screen
                   name = 'HomeView'
                   component = { HomeView }
