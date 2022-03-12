@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, View } from 'react-native'
 import { useTailwind } from 'tailwind-rn'
 
-import React from 'react'
+import React, { useState } from 'react'
 
 interface SportsData {
   id: number, 
@@ -39,7 +39,7 @@ const sportData: SportsData[] = [
     id: 5,
     text: "⚽ Football",
     selected: false,
-    key: "boxing"
+    key: "football"
   },
   {
     id: 6,
@@ -75,7 +75,7 @@ const sportData: SportsData[] = [
     id: 11,
     text: "🚵 Spinning",
     selected: false,
-    key: "basketball"
+    key: "spinning"
   },
   {
     id: 12,
@@ -86,6 +86,8 @@ const sportData: SportsData[] = [
 ];
 
 const WelcomeView = () => {
+  const [selected, setSelected] = useState(-1);
+
   const tailwind = useTailwind();
   return (
     <View style={tailwind(`bg-blue-100 h-full`)}>
@@ -98,19 +100,24 @@ const WelcomeView = () => {
         <Text style={tailwind(`text-base px-4 text-center mt-4`)}>A app all about your fitness! Please select some of your favourite activies from the options below so we can give you the best experience!</Text>
 
         <View style={tailwind(`m-9 mt-4 ml-9 flex-row flex-wrap`)}>
-          {sportData.map((item) => {
+          {sportData.map((item, index) => {
             return (
               <TouchableOpacity 
                 key={item.id}
-                style={tailwind(`border ml-4 mb-4 border-gray-500 rounded-xl bg-white w-40`)}>
-                    <Text style={tailwind(`text-lg p-2 text-black text-center font-semibold`)}>{item.text}</Text>
+                onPress={() => {
+                  sportData[index].selected = !sportData[index].selected
+                  setSelected(item.id + (sportData[index].selected ? 1 : 2));
+                  console.log(`${sportData[index].text} selected status: - ${sportData[index].selected}`)
+                }}
+                style={[tailwind(`ml-4 mb-4 rounded-xl bg-white w-40`), item.selected ? tailwind(`bg-blue-500 text-white`) : tailwind(`bg-white border border-gray-500`)]}>
+                    <Text style={[tailwind(`text-lg p-2 text-black text-center font-semibold`), item.selected ? tailwind(`text-white`) : tailwind(`text-black`)]}>{item.text}</Text>
               </TouchableOpacity>
             );
           })}
         </View>
         <View style={tailwind(`items-center`)}>
-          <TouchableOpacity 
-                  style={tailwind(`bg-blue-500 ml-4 border-gray-500 rounded-full w-80`)}>
+          <TouchableOpacity
+                  style={[tailwind(`ml-4 border-gray-500 rounded-full w-80`), (sportData.every(v => v.selected === false) ? tailwind(`bg-gray-300`) : tailwind(`bg-blue-500`))]}>
                       <Text style={tailwind(`text-lg p-2 text-white text-center`)}>Continue</Text>
           </TouchableOpacity>
 
