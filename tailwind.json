@@ -133,6 +133,11 @@
 			"width": 80
 		}
 	},
+	"w-8": {
+		"style": {
+			"width": 32
+		}
+	},
 	"flex-1": {
 		"style": {
 			"flexGrow": 1,

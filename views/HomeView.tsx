@@ -31,7 +31,7 @@ const HomeView = () => {
       <View style={tailwind(`pt-5 justify-center items-center`)}>
         <TouchableOpacity
                     onPress={() => Navigation.navigate('MapView' as never)}
-                    style={tailwind(`ml-4 bg-blue-500 border-gray-500 rounded-full w-80`)}>
+                    style={tailwind(`ml-4 bg-purple-500 border-gray-500 rounded-full w-80`)}>
                         <Text style={tailwind(`text-lg p-2 text-white text-center`)}>View Interactive Map</Text>
         </TouchableOpacity>
         <TouchableOpacity 
@@ -42,7 +42,7 @@ const HomeView = () => {
               </View>
         </TouchableOpacity>
       </View>
-      
+
     </SafeAreaView>
   )
 }
