@@ -23,6 +23,10 @@
   margin-top: 1rem
 }
 
+.ml-4 {
+  margin-left: 1rem
+}
+
 .mt-14 {
   margin-top: 3.5rem
 }
@@ -33,10 +37,6 @@
 
 .ml-9 {
   margin-left: 2.25rem
-}
-
-.ml-4 {
-  margin-left: 1rem
 }
 
 .mb-4 {
@@ -55,6 +55,10 @@
   height: 2.25rem
 }
 
+.h-1\/2 {
+  height: 50%
+}
+
 .h-4\/5 {
   height: 80%
 }
@@ -65,6 +69,14 @@
 
 .h-20 {
   height: 5rem
+}
+
+.h-1\/5 {
+  height: 20%
+}
+
+.h-3\/4 {
+  height: 75%
 }
 
 .w-full {
@@ -79,6 +91,10 @@
   width: 10rem
 }
 
+.w-80 {
+  width: 20rem
+}
+
 .w-24 {
   width: 6rem
 }
@@ -87,8 +103,8 @@
   width: 5rem
 }
 
-.w-80 {
-  width: 20rem
+.flex-1 {
+  flex: 1 1 0%
 }
 
 .flex-row {
@@ -109,6 +125,14 @@
 
 .items-center {
   align-items: center
+}
+
+.justify-start {
+  justify-content: flex-start
+}
+
+.justify-end {
+  justify-content: flex-end
 }
 
 .justify-center {
@@ -151,19 +175,39 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
-.bg-blue-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 234 254 / var(--tw-bg-opacity))
-}
-
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity))
 }
 
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity))
+}
+
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity))
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+}
+
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity))
+}
+
+.bg-purple-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 180 254 / var(--tw-bg-opacity))
+}
+
+.bg-purple-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity))
 }
 
 .p-2 {
@@ -193,12 +237,25 @@
   padding-bottom: 1rem
 }
 
+.pt-5 {
+  padding-top: 1.25rem
+}
+
+.pt-3 {
+  padding-top: 0.75rem
+}
+
 .text-center {
   text-align: center
 }
 
 .text-lg {
   font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem
 }
 
