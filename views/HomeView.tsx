@@ -17,7 +17,7 @@ const HomeView = () => {
 
   const handleSignOut = () => {
     signOut(fireAuth).then(() => {
-      Navigation.replace('LoginView', [])
+      Navigation.replace('LoginView' as never, [] as never)
       showToast('success', 'Logged out successfully!', 'You have successfully logged out of your account.');
     });
   };

@@ -12,7 +12,7 @@ const LoginView = () => {
   const Stack = createNativeStackNavigator();
 
   return (
-    <ImageBackground source={require('../assets/login-background.webp')} resizeMode="cover" style={{flex: 1,justifyContent: "cover"}}>
+    <ImageBackground source={require('../assets/login-background.webp')} resizeMode="cover" style={{flex: 1}}>
         <View style={[tailwind(`h-full`)]}>
         <Stack.Navigator>
             <Stack.Screen

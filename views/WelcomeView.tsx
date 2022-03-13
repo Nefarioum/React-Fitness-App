@@ -121,14 +121,14 @@ const WelcomeView = () => {
         </View>
         <View style={tailwind(`items-center`)}>
           <TouchableOpacity
-                  onPress={() => Navigation.replace('HomeView')}
+                  onPress={() => Navigation.replace('HomeView' as never, [] as never)}
                   disabled={(sportData.every(v => v.selected === false) ? true : false)}
                   style={[tailwind(`ml-4 border-gray-500 rounded-full w-80`), (sportData.every(v => v.selected === false) ? tailwind(`bg-gray-300`) : tailwind(`bg-blue-500`))]}>
                       <Text style={tailwind(`text-lg p-2 text-white text-center`)}>Continue</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
-                  onPress={() => Navigation.replace('HomeView')}
+                  onPress={() => Navigation.replace('HomeView' as never, [] as never)}
                   style={tailwind(`ml-4 mb-4 rounded-full w-80`)}>
                       <Text style={tailwind(`text-lg p-2 text-black text-center`)}>Not now</Text>
           </TouchableOpacity>

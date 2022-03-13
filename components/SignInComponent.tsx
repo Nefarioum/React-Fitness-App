@@ -17,7 +17,7 @@ const SignInComponent = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(fireAuth, user => {
         if (user) {
-            Navigation.replace('WelcomeView', [])
+            Navigation.replace('WelcomeView' as never, [] as never)
             showToast('success', 'Logged in successfully!', 'Welcome back, you have logged in as ' + (user.displayName === null ? user?.email : user?.displayName));
         }
     })
@@ -87,7 +87,7 @@ const SignInComponent = () => {
         <Text style={tailwind(`pt-4 text-white text-center`)}>New to Your Fitness? {"\n"}Start your wellness journey with us today!</Text>
         <TouchableOpacity 
             style={tailwind(`px-6 mt-4 rounded-lg w-40`)}
-            onPress = {() => Navigation.navigate('RegisterComponent')}>
+            onPress = {() => Navigation.navigate('RegisterComponent' as never)}>
         
             <View>
                 <Text style={tailwind(`text-lg text-orange-300 text-center font-semibold`)}>Sign Up</Text>
