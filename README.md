@@ -39,8 +39,9 @@ In the event you have been working on a feature and master has had changes since
 - Open a bash terminal in the code base and run `git fetch --all`
 - If you are not in master run `git checkout master`. If you are, ignore this step. 
 - Run `git reset --hard origin/master` to get the latest version of master locally
-- Run `git checkout -b "feature/BRANCH-NAME` to create and go to your new branch. 
-- Done! Do all your feature in this branch
+- Run `git checkout "feature/BRANCH-NAME` and go to the branch you want to rebase
+- Run `git rebase origin/master` and follow the steps accepting incoming or current changes based on what you need
+- Once done, run `git push --force` to complete the rebase!
 
 ## 📃 First Time Installation
 
