@@ -11,8 +11,17 @@
   bottom: 0px
 }
 
+.m-3 {
+  margin: 0.75rem
+}
+
 .m-9 {
   margin: 2.25rem
+}
+
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem
 }
 
 .mt-2 {
@@ -23,8 +32,24 @@
   margin-top: 1rem
 }
 
+.mt-7 {
+  margin-top: 1.75rem
+}
+
+.mt-5 {
+  margin-top: 1.25rem
+}
+
+.ml-2 {
+  margin-left: 0.5rem
+}
+
 .ml-4 {
   margin-left: 1rem
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem
 }
 
 .ml-9 {
@@ -55,6 +80,22 @@
   height: 2.25rem
 }
 
+.h-1\/6 {
+  height: 16.666667%
+}
+
+.h-16 {
+  height: 4rem
+}
+
+.h-5\/6 {
+  height: 83.333333%
+}
+
+.h-32 {
+  height: 8rem
+}
+
 .h-1\/2 {
   height: 50%
 }
@@ -83,16 +124,40 @@
   width: 10rem
 }
 
+.w-2\/6 {
+  width: 33.333333%
+}
+
+.w-16 {
+  width: 4rem
+}
+
+.w-3\/6 {
+  width: 50%
+}
+
+.w-4\/6 {
+  width: 66.666667%
+}
+
+.w-24 {
+  width: 6rem
+}
+
+.w-1\/6 {
+  width: 16.666667%
+}
+
+.w-5\/6 {
+  width: 83.333333%
+}
+
 .w-80 {
   width: 20rem
 }
 
 .w-20 {
   width: 5rem
-}
-
-.w-24 {
-  width: 6rem
 }
 
 .flex-1 {
@@ -149,6 +214,10 @@
   border-top-right-radius: 1rem
 }
 
+.border-2 {
+  border-width: 2px
+}
+
 .border {
   border-width: 1px
 }
@@ -161,6 +230,21 @@
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+}
+
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity))
+}
+
+.bg-blue-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity))
 }
 
 .bg-purple-500 {
@@ -181,6 +265,18 @@
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity))
+}
+
+.p-6 {
+  padding: 1.5rem
+}
+
+.p-1 {
+  padding: 0.25rem
+}
+
+.p-3 {
+  padding: 0.75rem
 }
 
 .p-2 {
@@ -210,6 +306,18 @@
   padding-bottom: 1rem
 }
 
+.pr-4 {
+  padding-right: 1rem
+}
+
+.pl-2 {
+  padding-left: 0.5rem
+}
+
+.pt-8 {
+  padding-top: 2rem
+}
+
 .pt-5 {
   padding-top: 1.25rem
 }
@@ -227,6 +335,11 @@
   line-height: 1.75rem
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem
@@ -237,11 +350,6 @@
   line-height: 2.5rem
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem
@@ -249,6 +357,10 @@
 
 .font-semibold {
   font-weight: 600
+}
+
+.font-bold {
+  font-weight: 700
 }
 
 .text-white {
@@ -264,4 +376,14 @@
 .text-orange-300 {
   --tw-text-opacity: 1;
   color: rgb(253 186 116 / var(--tw-text-opacity))
+}
+
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity))
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity))
 }
