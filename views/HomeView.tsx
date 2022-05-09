@@ -9,6 +9,8 @@ import Toast from 'react-native-toast-message';
 import React from 'react'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
+import NavigationComponent from '../components/NavigationComponent';
+
 const HomeView = () => {
   const currentHour = new Date().getHours()
   const currentTimeOfDay = 'Good ' + (currentHour < 12 ? 'morning!' : currentHour < 18 ? 'afternoon!' : 'evening!');
@@ -124,7 +126,8 @@ const HomeView = () => {
           <Text style={tailwind(`text-gray-500 font-semibold `)}>You are more active then 75% of our users!</Text>
         </View>
       </View>
-
+      
+      <NavigationComponent />
     </SafeAreaView>
   )
 }
