@@ -27,20 +27,20 @@
   margin-left: 1rem
 }
 
-.mt-14 {
-  margin-top: 3.5rem
-}
-
-.mt-3 {
-  margin-top: 0.75rem
-}
-
 .ml-9 {
   margin-left: 2.25rem
 }
 
 .mb-4 {
   margin-bottom: 1rem
+}
+
+.mt-14 {
+  margin-top: 3.5rem
+}
+
+.mt-3 {
+  margin-top: 0.75rem
 }
 
 .flex {
@@ -57,10 +57,6 @@
 
 .h-1\/2 {
   height: 50%
-}
-
-.h-3\/4 {
-  height: 75%
 }
 
 .h-4\/5 {
