@@ -28,13 +28,21 @@ const HomeView = () => {
     <SafeAreaView style={tailwind(`h-full justify-center items-center bg-white`)}>
       <Text style={tailwind(`text-center`)}>{currentTimeOfDay}{"\n"} You are signed in as {(fireAuth.currentUser?.displayName === null ? fireAuth.currentUser?.email : fireAuth.currentUser?.displayName)}</Text>
 
-      <TouchableOpacity 
-            onPress={handleSignOut}
-            style={tailwind(`px-6 py-2 mt-4 rounded-lg bg-white w-40`)}>
-            <View>
-                <Text style={tailwind(`text-lg text-black text-center font-semibold`)}>Sign out</Text>
-            </View>
+      <View style={tailwind(`pt-5 justify-center items-center`)}>
+        <TouchableOpacity
+                    onPress={() => Navigation.navigate('MapView' as never)}
+                    style={tailwind(`ml-4 bg-purple-500 border-gray-500 rounded-full w-80`)}>
+                        <Text style={tailwind(`text-lg p-2 text-white text-center`)}>View Interactive Map</Text>
         </TouchableOpacity>
+        <TouchableOpacity 
+              onPress={handleSignOut}
+              style={tailwind(`px-6 py-2 mt-4 rounded-lg bg-white w-40`)}>
+              <View>
+                  <Text style={tailwind(`text-lg text-black text-center font-semibold`)}>Sign out</Text>
+              </View>
+        </TouchableOpacity>
+      </View>
+
     </SafeAreaView>
   )
 }
