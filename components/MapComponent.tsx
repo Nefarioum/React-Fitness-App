@@ -2,6 +2,8 @@ import React from 'react'
 import MapView, { Marker } from 'react-native-maps'
 import { useTailwind } from 'tailwind-rn/dist';
 
+const mapRef = React.createRef<MapView>();
+
 interface Location {
     latitude: number,
     longitude: number
@@ -10,7 +12,8 @@ interface EventsData {
     id: number, 
     name: string, 
     description: string,
-    location: Location
+    location: Location,
+    marker: any
 }
 
 const EventsData : EventsData[] = [
@@ -21,7 +24,8 @@ const EventsData : EventsData[] = [
         location: {
             latitude: 50.7431407570472336,
             longitude: -1.896836997420026
-        }
+        },
+        marker: React.createRef<Marker>()
     },
     {
         id: 1,
@@ -30,7 +34,8 @@ const EventsData : EventsData[] = [
         location: {
             latitude: 50.743407570472336,
             longitude: -1.898796997420026
-        }
+        },
+        marker: React.createRef<Marker>()
     },
     {
         id: 2,
@@ -39,7 +44,8 @@ const EventsData : EventsData[] = [
         location: {
             latitude: 50.741407570472336,
             longitude: -1.899796997420026
-        }
+        },
+        marker: React.createRef<Marker>()
     },
     {
         id: 3,
@@ -48,7 +54,8 @@ const EventsData : EventsData[] = [
         location: {
             latitude: 50.744507570472336,
             longitude: -1.899796997420026
-        }
+        },
+        marker: React.createRef<Marker>()
     }
 ];
 
@@ -57,6 +64,7 @@ const MapComponent = () => {
 
   return (
     <MapView
+        ref={mapRef}
         style = {tailwind(`flex-1`)}
         initialRegion={{
           latitude: 50.743407570472336,
@@ -67,6 +75,7 @@ const MapComponent = () => {
         {EventsData.map((item, index) => {
             return(
                 <Marker
+                    ref={item.marker}
                     key={item.id}
                     coordinate={{
                         latitude: item.location.latitude,
@@ -82,4 +91,4 @@ const MapComponent = () => {
   )
 }
 
-export default MapComponent
+export { MapComponent, EventsData, mapRef }
