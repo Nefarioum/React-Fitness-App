@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, View } from 'react-native'
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native';
 import { useTailwind } from 'tailwind-rn'
@@ -103,6 +103,7 @@ const WelcomeView = () => {
         <Text style={tailwind(`text-base px-4 text-center mt-3 font-semibold`)}>Welcome to Your Fitness.</Text>
         <Text style={tailwind(`text-base px-4 text-center mt-4`)}>A app all about your fitness! Please select some of your favourite activies from the options below so we can give you the best experience!</Text>
 
+        <ScrollView>
         <View style={tailwind(`m-9 mt-4 ml-9 flex-row flex-wrap`)}>
           {sportData.map((item, index) => {
             return (
@@ -119,6 +120,8 @@ const WelcomeView = () => {
             );
           })}
         </View>
+        </ScrollView>
+
         <View style={tailwind(`items-center`)}>
           <TouchableOpacity
                   onPress={() => Navigation.replace('HomeView' as never, [] as never)}

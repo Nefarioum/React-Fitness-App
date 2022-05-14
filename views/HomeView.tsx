@@ -30,7 +30,7 @@ const HomeView = () => {
     <SafeAreaView style={tailwind(`h-full bg-gray-100`)}>
       <View style={tailwind(`h-1/6 flex flex-row`)}>
         <View style={tailwind(`p-6 justify-center`)}>
-          <Text style={tailwind(`text-3xl font-bold`)}> Hi, Nefarious </Text>
+          <Text style={tailwind(`text-3xl font-bold`)}> Hi, {(fireAuth.currentUser?.displayName === null ? fireAuth.currentUser?.email : fireAuth.currentUser?.displayName)} </Text>
           <Text style={tailwind(`text-xl font-semibold text-blue-700`)}> Let's check your activity </Text>
         </View>
         
