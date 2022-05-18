@@ -20,6 +20,10 @@ const NavigationComponent = () => {
         <Icon name='map' type='font-awesome' color={Route.name == 'MapView' ? 'indigo' : 'gray'} size={16} />
         <Text style = {tailwind(`${Route.name == 'MapView' ? 'text-indigo-700' : 'text-gray-300'} text-center mt-1`)}>Map</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => Navigation.navigate('CalendarView' as never)} style = {tailwind(`flex flex-col justify-between w-24 p-2 h-4/6 rounded-full`)}>
+        <Icon name='calendar' type='font-awesome' color={Route.name == 'CalendarView' ? 'indigo' : 'gray'} size={16} />
+        <Text style = {tailwind(`${Route.name == 'CalendarView' ? 'text-indigo-700' : 'text-gray-300'} text-center mt-1`)}>Calendar</Text>
+      </TouchableOpacity>
       <TouchableOpacity style = {tailwind(`flex flex-col justify-between w-24 p-2 h-4/6 rounded-full`)}>
         <Icon name='cog' type='font-awesome' color={Route.name == 'SettingsView' ? 'indigo' : 'gray'} size={16} />
         <Text style = {tailwind(`${Route.name == 'SettingsView' ? 'text-indigo-700' : 'text-gray-300'} text-center mt-1`)}>Settings</Text>

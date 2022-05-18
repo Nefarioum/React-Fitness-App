@@ -20,6 +20,7 @@ import HomeView from './views/HomeView';
 import LoginView from './views/LoginView';
 import WelcomeView from './views/WelcomeView';
 import MapView from './views/MapView';
+import CalendarView from './views/CalendarView';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -70,6 +71,13 @@ export default function App() {
                 <Stack.Screen
                   name = 'MapView'
                   component = { MapView }
+                  options =  {{
+                    headerShown: false
+                  }}
+                />
+                <Stack.Screen
+                  name = 'CalendarView'
+                  component = { CalendarView }
                   options =  {{
                     headerShown: false
                   }}
