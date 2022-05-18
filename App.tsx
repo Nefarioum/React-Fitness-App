@@ -23,6 +23,7 @@ import MapView from './views/MapView';
 import CalendarView from './views/CalendarView';
 import CardioWorkoutView from './views/CardioWorkoutView';
 import LegsWorkoutView from './views/LegsWorkoutView';
+import SettingsView from './views/SettingsView';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -94,6 +95,13 @@ export default function App() {
                 <Stack.Screen
                   name = 'LegsWorkoutView'
                   component = { LegsWorkoutView }
+                  options =  {{
+                    headerShown: false
+                  }}
+                />
+                <Stack.Screen
+                  name = 'SettingsView'
+                  component = { SettingsView }
                   options =  {{
                     headerShown: false
                   }}

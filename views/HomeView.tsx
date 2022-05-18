@@ -35,12 +35,14 @@ const HomeView = () => {
         </View>
         
         <View style={tailwind(`w-2/6 pr-4 justify-center items-end`)}>
-          <Image
-            style={tailwind(`w-16 h-16 rounded-full border-2`)}
-            source={{
-              uri: 'https://ui-avatars.com/api/?name=Nefarious&background=6047ff&color=fff',
-            }}
-          />
+          <TouchableOpacity onPress={handleSignOut}>
+            <Image
+              style={tailwind(`w-16 h-16 rounded-full border-2`)}
+              source={{
+                uri: 'https://ui-avatars.com/api/?name=Nefarious&background=6047ff&color=fff',
+              }}
+            />
+          </TouchableOpacity>
         </View>
       </View>
       
