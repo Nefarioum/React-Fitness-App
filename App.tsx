@@ -21,6 +21,8 @@ import LoginView from './views/LoginView';
 import WelcomeView from './views/WelcomeView';
 import MapView from './views/MapView';
 import CalendarView from './views/CalendarView';
+import CardioWorkoutView from './views/CardioWorkoutView';
+import LegsWorkoutView from './views/LegsWorkoutView';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -78,6 +80,20 @@ export default function App() {
                 <Stack.Screen
                   name = 'CalendarView'
                   component = { CalendarView }
+                  options =  {{
+                    headerShown: false
+                  }}
+                />
+                <Stack.Screen
+                  name = 'CardioWorkoutView'
+                  component = { CardioWorkoutView }
+                  options =  {{
+                    headerShown: false
+                  }}
+                />
+                <Stack.Screen
+                  name = 'LegsWorkoutView'
+                  component = { LegsWorkoutView }
                   options =  {{
                     headerShown: false
                   }}
