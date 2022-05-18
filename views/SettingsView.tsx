@@ -40,7 +40,7 @@ const SettingsView = () => {
                 }}
             />
 
-            <TouchableOpacity style={tailwind(`mt-4 bg-indigo-600 rounded-full w-32`)}>
+            <TouchableOpacity onPress={handleSignOut} style={tailwind(`mt-4 bg-indigo-600 rounded-full w-32`)}>
                 <View style={tailwind(`flex flex-row justify-between items-center`)}>
                     <Text style={tailwind(`text-lg ml-3 p-2 text-white text-sm text-center`)}>Sign out</Text>
                     <Icon style={tailwind(`text-center items-center mr-4`)} name='chevron-right' type='font-awesome' color='white' size={16} />
