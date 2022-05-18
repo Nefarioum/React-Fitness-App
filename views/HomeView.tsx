@@ -75,25 +75,26 @@ const HomeView = () => {
           <Text style={tailwind(`text-xl font-semibold pb-4`)}> Checkout our latest workouts! </Text>
 
           <View style={tailwind(`flex flex-row h-5/6`)}>
-          <View style={[tailwind(`bg-white w-4/6 rounded-xl bg-orange-400 flex flex-row`), {height: "80%", shadowColor: '#000000', shadowRadius: 2, shadowOpacity: 0.5, shadowOffset: { width: 0.1, height: 0.1}}]}>
+          <TouchableOpacity onPress={() => Navigation.navigate('CardioWorkoutView' as never)} style={tailwind(`w-4/6`)}>     
+            <View style={[tailwind(`bg-white w-full rounded-xl bg-orange-400 flex flex-row`), {height: "80%", shadowColor: '#000000', shadowRadius: 2, shadowOpacity: 0.5, shadowOffset: { width: 0.1, height: 0.1}}]}>
 
-            <View style={[tailwind(``), {width: "60%"}]}>
-              <Text style={tailwind(`text-white text-xl font-bold mt-2 ml-2 p-1`)}>Cardio</Text>
-              <Text style={tailwind(`text-white ml-2 p-1`)}>10 Exercises</Text>
-              <Text style={tailwind(`text-white ml-2 p-1`)}>50 Minutes</Text>
+              <View style={[tailwind(``), {width: "60%"}]}>
+                <Text style={tailwind(`text-white text-xl font-bold mt-2 ml-2 p-1`)}>Cardio</Text>
+                <Text style={tailwind(`text-white ml-2 p-1`)}>10 Exercises</Text>
+                <Text style={tailwind(`text-white ml-2 p-1`)}>50 Minutes</Text>
+              </View>
+              <View style={[tailwind(`justify-end`), {width: "40%"}]}>
+                <Image
+                  style={tailwind(`w-24 h-32`)}
+                  source={{
+                    uri: 'http://assets.stickpng.com/images/580b585b2edbce24c47b2b72.png',
+                  }}
+                />
+              </View>
+
             </View>
-
-            <View style={[tailwind(`justify-end`), {width: "40%"}]}>
-              <Image
-                style={tailwind(`w-24 h-32`)}
-                source={{
-                  uri: 'http://assets.stickpng.com/images/580b585b2edbce24c47b2b72.png',
-                }}
-              />
-            </View>
-
-          </View>
-         
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigation.navigate('LegsWorkoutView' as never)}>     
           <View style={[tailwind(`bg-white w-4/6 rounded-xl bg-blue-400 flex flex-row ml-4`), {height: "80%", shadowColor: '#000000', shadowRadius: 2, shadowOpacity: 0.5, shadowOffset: { width: 0.1, height: 0.1}}]}>
 
             <View style={[tailwind(``), {width: "60%"}]}>
@@ -112,9 +113,19 @@ const HomeView = () => {
             </View>
 
           </View>
+
+          </TouchableOpacity>
           </View>
         </View>
+        
       </View>
+      <View style={tailwind(`w-full items-center mb-8`)}>
+        <TouchableOpacity
+          style={tailwind(`ml-4 border-gray-500 justify-center bg-indigo-600 rounded-full w-80`)}>
+          <Text style={tailwind(`text-lg p-2 text-white text-center`)}>Click to view all workouts</Text>
+        </TouchableOpacity>
+      </View>
+
 
       <View style={[tailwind(`bg-white mx-6 rounded-xl flex flex-row rounded-xl`), {height: "9%",shadowColor: '#000000', shadowRadius: 2, shadowOpacity: 0.5, shadowOffset: { width: 0.1, height: 0.1}}]}>
         <View style={tailwind(`w-1/6 justify-center items-center`)}>
