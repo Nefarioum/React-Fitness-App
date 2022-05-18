@@ -24,7 +24,7 @@ const NavigationComponent = () => {
         <Icon name='calendar' type='font-awesome' color={Route.name == 'CalendarView' ? 'indigo' : 'gray'} size={16} />
         <Text style = {tailwind(`${Route.name == 'CalendarView' ? 'text-indigo-700' : 'text-gray-300'} text-center mt-1`)}>Calendar</Text>
       </TouchableOpacity>
-      <TouchableOpacity style = {tailwind(`flex flex-col justify-between w-24 p-2 h-4/6 rounded-full`)}>
+      <TouchableOpacity onPress={() => Navigation.navigate('SettingsView' as never)} style = {tailwind(`flex flex-col justify-between w-24 p-2 h-4/6 rounded-full`)}>
         <Icon name='cog' type='font-awesome' color={Route.name == 'SettingsView' ? 'indigo' : 'gray'} size={16} />
         <Text style = {tailwind(`${Route.name == 'SettingsView' ? 'text-indigo-700' : 'text-gray-300'} text-center mt-1`)}>Settings</Text>
       </TouchableOpacity>
