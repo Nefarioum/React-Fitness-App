@@ -49,7 +49,7 @@ const HomeView = () => {
       <View style={[tailwind(`justify-center flex flex-row`), {height: "25%"}]}>
           <View style={[tailwind(`bg-white m-3 pb-4 h-full w-2/6 rounded-xl`), {shadowColor: '#000000', shadowRadius: 2, shadowOpacity: 0.5, shadowOffset: { width: 0.1, height: 0.1}}]}>
             <Text style={tailwind(`text-xl font-bold mt-2 p-1`)}>💪 Completed</Text>
-            <Text style={tailwind(`text-4xl font-semibold mt-7 text-center justify-center items-center`)}>20</Text>
+            <Text style={tailwind(`text-4xl font-semibold mt-7 text-center justify-center items-center`)}>0</Text>
             <Text style={tailwind(`text-gray-500 font-semibold mt-2 text-center`)}>Total completed workouts</Text>
           </View>
 
@@ -58,14 +58,14 @@ const HomeView = () => {
               <Text style={tailwind(`text-xl font-bold mt-2 text-center`)}> 🏃‍♂️In Progress</Text>
 
               <View style={tailwind(`flex flex-row justify-center items-center`)}>
-                <Text style={tailwind(`text-3xl font-semibold mt-2 text-center justify-center items-center`)}>2</Text>
+                <Text style={tailwind(`text-3xl font-semibold mt-2 text-center justify-center items-center`)}>0</Text>
                 <Text style={tailwind(`text-gray-500 font-semibold pl-2 mt-2 text-center`)}>Workouts</Text>
               </View>
             </View>
             <View style={[tailwind(`bg-white w-full mt-5 rounded-xl`), {height:"45%", shadowColor: '#000000', shadowRadius: 2, shadowOpacity: 0.5, shadowOffset: { width: 0.1, height: 0.1} }]}>
               <Text style={tailwind(`text-xl font-bold mt-2 text-center`)}>⏱️ Time Spent</Text>
               <View style={tailwind(`flex flex-row justify-center items-center`)}>
-                <Text style={tailwind(`text-3xl font-semibold mt-2 text-center justify-center items-center`)}>340</Text>
+                <Text style={tailwind(`text-3xl font-semibold mt-2 text-center justify-center items-center`)}>0</Text>
                 <Text style={tailwind(`text-gray-500 font-semibold pl-2 mt-2 text-center`)}>Minutes</Text>
               </View>
             </View>
