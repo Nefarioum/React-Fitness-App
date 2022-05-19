@@ -27,6 +27,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
+      "config": {
+        "googleMaps": {
+          "apiKey": process.env.GOOGLE_MAPS_APIKEY
+        }
+      },
       "package": "com.nefarioum.fitnessapp"
     },
     "web": {
