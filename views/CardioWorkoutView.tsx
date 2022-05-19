@@ -9,6 +9,11 @@ import { CheckBox } from 'react-native-elements';
 
 const CardioWorkoutView = () => {
   const [check1, setCheck1] = useState(false);
+  const [check2, setCheck2] = useState(false);
+  const [check3, setCheck3] = useState(false);
+  const [check4, setCheck4] = useState(false);
+  const [check5, setCheck5] = useState(false);
+
 
   const tailwind = useTailwind();
   const Stack = createNativeStackNavigator();
@@ -43,8 +48,8 @@ const CardioWorkoutView = () => {
             containerStyle ={{backgroundColor: 'transparent', borderWidth: 0}}
             center
             title="Mark here once completed"
-            checked={check1}
-            onPress={() => setCheck1(!check1)}
+            checked={check2}
+            onPress={() => setCheck2(!check2)}
             />
         </View>
 
@@ -57,8 +62,8 @@ const CardioWorkoutView = () => {
             containerStyle ={{backgroundColor: 'transparent', borderWidth: 0}}
             center
             title="Mark here once completed"
-            checked={check1}
-            onPress={() => setCheck1(!check1)}
+            checked={check3}
+            onPress={() => setCheck3(!check3)}
             />
         </View>
 
@@ -71,8 +76,8 @@ const CardioWorkoutView = () => {
             containerStyle ={{backgroundColor: 'transparent', borderWidth: 0}}
             center
             title="Mark here once completed"
-            checked={check1}
-            onPress={() => setCheck1(!check1)}
+            checked={check4}
+            onPress={() => setCheck4(!check4)}
             />
         </View>
 
@@ -85,8 +90,8 @@ const CardioWorkoutView = () => {
             containerStyle ={{backgroundColor: 'transparent', borderWidth: 0}}
             center
             title="Mark here once completed"
-            checked={check1}
-            onPress={() => setCheck1(!check1)}
+            checked={check5}
+            onPress={() => setCheck5(!check5)}
             />
         </View>
         

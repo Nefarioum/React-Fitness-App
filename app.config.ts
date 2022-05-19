@@ -3,11 +3,11 @@ import 'dotenv/config'
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-    "name": "fitness-app",
+    "name": "My Fitness",
     "slug": "fitness-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/dummy-logo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
