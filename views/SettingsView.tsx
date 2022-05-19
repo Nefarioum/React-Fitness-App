@@ -36,7 +36,7 @@ const SettingsView = () => {
             <Image
                 style={tailwind(`w-32 h-32 rounded-full`)}
                 source={{
-                    uri: 'https://ui-avatars.com/api/?name=Nefarious&background=6047ff&color=fff&size=512',
+                    uri: `https://ui-avatars.com/api/?name=${fireAuth.currentUser?.displayName}&background=6047ff&color=fff&size=512`,
                 }}
             />
 

@@ -39,7 +39,7 @@ const HomeView = () => {
             <Image
               style={tailwind(`w-16 h-16 rounded-full border-2`)}
               source={{
-                uri: 'https://ui-avatars.com/api/?name=Nefarious&background=6047ff&color=fff',
+                uri: `https://ui-avatars.com/api/?name=${fireAuth.currentUser?.displayName}&background=6047ff&color=fff`,
               }}
             />
           </TouchableOpacity>
